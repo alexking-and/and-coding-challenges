@@ -1,4 +1,4 @@
-# Challenge 10 - Lights!
+# Challenge 1 - Lights!
 
 ## Problem
 The clubhouse has been understandably pretty quiet of late, but at last, life is slowly returning and the office is alive once again with the sound of busy ANDis.
