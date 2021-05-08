@@ -6,9 +6,9 @@ There's a smart-lamp in the corner of the room which is only turned on when some
 Given a set of intervals which describe the entrance and exit times of ANDi's in minutes, your task is to write code to determine how many minutes the light has been on for in total.
 The input data is provided [here](https://pastebin.com/erXaH6G9).
 
-* 3 points are awarded for submitting a working solution
-* 3 further points are awarded for using a language/framework which no other participants use
-* 4 further points are awarded for a solution under 400 bytes of code
+* [x] 3 points are awarded for submitting a working solution
+* [x] 3 further points are awarded for using a language/framework which no other participants use
+* [x] 4 further points are awarded for a solution under 400 bytes of code
 
 ### Example
 For the following set of intervals:
