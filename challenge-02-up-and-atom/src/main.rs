@@ -6,7 +6,7 @@ use regex::Regex;
 use symbols::{ELEMENTS, SUBSCRIPT_NUMBERS};
 
 static BRACKET_GROUPS_MATCHER: &'static str = r"\((.+)\)([₂-₉]?)";
-static SINGLE_SYMBOL_MATCHER: &'static str = r"([A-Z][a-z]?)([₂-₉]?)";
+static SINGLE_SYMBOL_MATCHER: &'static str = r"([A-Z][a-z]*)([₂-₉]?)";
 
 fn determine_quantity(match_string: &str) -> u8 {
   match match_string.len() {
