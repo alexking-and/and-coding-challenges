@@ -6,3 +6,4 @@ Challenge | Technologies Used
 --- | ---
 [#1: Lights!](challenge-01-lights) | Lua
 [#2: Up and Atom!](challenge-02-up-and-atom) | Rust
+~~[#3: Snake!](challenge-03-snake)~~ | ~~Rust, Bevy~~
