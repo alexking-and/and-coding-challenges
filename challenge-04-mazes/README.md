@@ -18,4 +18,5 @@ Maze walls should be 1 unit in thickness.
 Mazes don’t necessarily have to be square.
 
 ## Solution
-I haven't tried maze generation before but I _think_ I can make one with a fairly simple recursive algorithm, which should then just need a tree traversal algorithm to solve, so I think this should be simple enough that I can whip out a pure functional language for this (thinking either Reason or F#).
+I knew of F# as a .NET-ified fork of OCaml, which I haven't used before but seemed like a good platform for this solution.
+I had generation and solution algorithms mapped out based off depth-first search, but unfortunately again I just didn't have time to complete.
