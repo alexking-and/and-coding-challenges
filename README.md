@@ -8,3 +8,4 @@ Challenge | Technologies Used
 [#2: Up and Atom!](challenge-02-up-and-atom) | Rust
 ~~[#3: Snake!](challenge-03-snake)~~ | ~~Rust, Bevy~~
 ~~[#4: Mazes](challenge-04-mazes)~~ | ~~F#~~
+[#5: Short Changed](challenge-05-short-changed) | JavaScript

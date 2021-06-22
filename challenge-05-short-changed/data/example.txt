@@ -1,0 +1,8 @@
+Transaction: £12.91
+Cash Provided: £20
+
+Output: 
+1 x £5
+1 x £2
+1 x 5p
+2 x 2p
