@@ -81,8 +81,8 @@ timeStringToWordString timeString =
             "pm" -> 
               case intToNumberString (h - 12) of
                 Nothing -> "Invalid Input"
-                Just hx -> String.concat [hx, " ", m, " pm"]
+                Just hx -> String.concat ["It's ", hx, " ", m, " p.m."]
             _ ->
               case intToNumberString h of
                 Nothing -> "Invalid Input"
-                Just hx -> String.concat [hx, " ", m, " am"]
+                Just hx -> String.concat ["It's ", hx, " ", m, " a.m."]
