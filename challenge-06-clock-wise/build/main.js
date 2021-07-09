@@ -5159,7 +5159,7 @@ var $author$project$Main$subscriptions = function (_v0) {
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $author$project$Main$speak = _Platform_outgoingPort('speak', $elm$json$Json$Encode$string);
 var $author$project$ClockParser$amPm = function (h) {
-	return (h < 12) ? 'am' : 'pm';
+	return (h < 12) ? 'a.m.' : 'p.m.';
 };
 var $elm$core$Maybe$andThen = F2(
 	function (callback, maybeValue) {
@@ -5190,7 +5190,7 @@ var $author$project$ClockParser$hours = function (timeString) {
 			A2($elm$core$String$split, ':', timeString)));
 };
 var $author$project$ClockParser$digits = _List_fromArray(
-	['o\'', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']);
+	['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']);
 var $author$project$ClockParser$wordFromList = F2(
 	function (n, digitList) {
 		wordFromList:
@@ -5220,36 +5220,55 @@ var $author$project$ClockParser$teens = _List_fromArray(
 var $author$project$ClockParser$teenToWord = function (n) {
 	return A2($author$project$ClockParser$wordFromList, n - 10, $author$project$ClockParser$teens);
 };
+var $author$project$ClockParser$intToHourString = function (n) {
+	var twelveHrVal = (n > 12) ? (n - 12) : n;
+	var _v0 = (twelveHrVal / 10) | 0;
+	switch (_v0) {
+		case 0:
+			return $author$project$ClockParser$digitToWord(twelveHrVal);
+		case 1:
+			return $author$project$ClockParser$teenToWord(twelveHrVal);
+		default:
+			return $elm$core$Maybe$Nothing;
+	}
+};
 var $author$project$ClockParser$tens = _List_fromArray(
-	['twenty', 'thirty', 'fourty', 'fifty']);
+	['twenty', 'thirty', 'forty', 'fifty']);
 var $author$project$ClockParser$tensToWord = F2(
 	function (firstDigit, secondDigit) {
-		if (!secondDigit) {
-			return A2($author$project$ClockParser$wordFromList, firstDigit - 2, $author$project$ClockParser$tens);
-		} else {
-			var _v1 = A2($author$project$ClockParser$wordFromList, firstDigit - 2, $author$project$ClockParser$tens);
-			if (_v1.$ === 'Nothing') {
-				return $elm$core$Maybe$Nothing;
+		var firstDigitWord = A2($author$project$ClockParser$wordFromList, firstDigit - 2, $author$project$ClockParser$tens);
+		var secondDigitWord = A2($author$project$ClockParser$wordFromList, secondDigit, $author$project$ClockParser$digits);
+		var _v0 = _Utils_Tuple2(firstDigitWord, secondDigitWord);
+		if ((_v0.a.$ === 'Just') && (_v0.b.$ === 'Just')) {
+			if (_v0.b.a === '') {
+				var a = _v0.a.a;
+				return $elm$core$Maybe$Just(a);
 			} else {
-				var firstWord = _v1.a;
-				var _v2 = A2($author$project$ClockParser$wordFromList, secondDigit, $author$project$ClockParser$digits);
-				if (_v2.$ === 'Nothing') {
-					return $elm$core$Maybe$Nothing;
-				} else {
-					var secondWord = _v2.a;
-					return $elm$core$Maybe$Just(
-						$elm$core$String$concat(
-							_List_fromArray(
-								[firstWord, ' ', secondWord])));
-				}
+				var a = _v0.a.a;
+				var b = _v0.b.a;
+				return $elm$core$Maybe$Just(
+					$elm$core$String$concat(
+						_List_fromArray(
+							[a, ' ', b])));
 			}
+		} else {
+			return $elm$core$Maybe$Nothing;
 		}
 	});
-var $author$project$ClockParser$intToNumberString = function (n) {
+var $author$project$ClockParser$intToMinuteString = function (n) {
+	var f = function (x) {
+		return $elm$core$Maybe$Just(
+			$elm$core$String$concat(
+				_List_fromArray(
+					['o\' ', x])));
+	};
 	var _v0 = (n / 10) | 0;
 	switch (_v0) {
 		case 0:
-			return $author$project$ClockParser$digitToWord(n);
+			return A2(
+				$elm$core$Maybe$andThen,
+				f,
+				$author$project$ClockParser$digitToWord(n));
 		case 1:
 			return $author$project$ClockParser$teenToWord(n);
 		case 2:
@@ -5283,43 +5302,42 @@ var $author$project$ClockParser$minutes = function (timeString) {
 			$elm$core$List$tail(
 				A2($elm$core$String$split, ':', timeString))));
 };
-var $author$project$ClockParser$timeStringToWordString = function (timeString) {
-	var _v0 = A2(
-		$elm$core$Maybe$andThen,
-		$author$project$ClockParser$intToNumberString,
-		$author$project$ClockParser$minutes(timeString));
-	if (_v0.$ === 'Nothing') {
-		return 'Invalid Input';
-	} else {
-		var m = _v0.a;
-		var _v1 = $author$project$ClockParser$hours(timeString);
-		if (_v1.$ === 'Nothing') {
-			return 'Invalid Input';
+var $elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return value;
 		} else {
-			var h = _v1.a;
-			var _v2 = $author$project$ClockParser$amPm(h);
-			if (_v2 === 'pm') {
-				var _v3 = $author$project$ClockParser$intToNumberString(h - 12);
-				if (_v3.$ === 'Nothing') {
-					return 'Invalid Input';
-				} else {
-					var hx = _v3.a;
-					return $elm$core$String$concat(
-						_List_fromArray(
-							['It\'s ', hx, ' ', m, ' p.m.']));
-				}
-			} else {
-				var _v4 = $author$project$ClockParser$intToNumberString(h);
-				if (_v4.$ === 'Nothing') {
-					return 'Invalid Input';
-				} else {
-					var hx = _v4.a;
-					return $elm$core$String$concat(
-						_List_fromArray(
-							['It\'s ', hx, ' ', m, ' a.m.']));
-				}
-			}
+			return _default;
 		}
+	});
+var $author$project$ClockParser$timeStringToWordString = function (timeString) {
+	switch (timeString) {
+		case '00:00':
+			return 'It\'s midnight';
+		case '12:00':
+			return 'It\'s midday';
+		default:
+			var minutesVal = $author$project$ClockParser$minutes(timeString);
+			var hoursVal = $author$project$ClockParser$hours(timeString);
+			var amPmStr = $author$project$ClockParser$amPm(
+				A2($elm$core$Maybe$withDefault, 0, hoursVal));
+			var minutesStr = A2($elm$core$Maybe$andThen, $author$project$ClockParser$intToMinuteString, minutesVal);
+			var hoursStr = A2($elm$core$Maybe$andThen, $author$project$ClockParser$intToHourString, hoursVal);
+			var _v1 = _Utils_Tuple2(minutesStr, hoursStr);
+			if ((_v1.a.$ === 'Just') && (_v1.b.$ === 'Just')) {
+				var m = _v1.a.a;
+				var h = _v1.b.a;
+				return _Utils_eq(
+					minutesVal,
+					$elm$core$Maybe$Just(0)) ? $elm$core$String$concat(
+					_List_fromArray(
+						['It\'s ', h, ' ', amPmStr])) : $elm$core$String$concat(
+					_List_fromArray(
+						['It\'s ', h, ' ', m, ' ', amPmStr]));
+			} else {
+				return 'Invalid Input';
+			}
 	}
 };
 var $author$project$Main$update = F2(
