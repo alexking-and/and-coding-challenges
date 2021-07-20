@@ -9,4 +9,5 @@ Challenge | Technologies Used
 ~~[#3: Snake!](challenge-03-snake)~~ | ~~Rust, Bevy~~
 ~~[#4: Mazes](challenge-04-mazes)~~ | ~~F#~~
 [#5: Short Changed](challenge-05-short-changed) | JavaScript
-[#6: Clock Wise](challenge-06-clock-wise) | Elm, Javascript
+[#6: Clock Wise](challenge-06-clock-wise) | Elm
+[#7: Coding's a Blast](challenge-07-codings-a-blast) | Swift

@@ -1,4 +1,4 @@
-# Challenge 5 - Short Changed
+# Challenge 6 - Clock Wise
 
 ## Problem
 Your challenge this week is to build a speaking clock.
