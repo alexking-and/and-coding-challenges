@@ -43,7 +43,7 @@ func defuseBomb(wires: [String]) -> Bool {
  *  TESTS
  */
 
-func test() -> Void {
+/* func test() -> Void {
   let testCases: [([String], Bool)] = [
     (["green", "white", "red", "black"], true),
     (["red", "green", "purple", "white"], false),
@@ -61,4 +61,4 @@ func test() -> Void {
   }
 }
 
-test()
+test() */
