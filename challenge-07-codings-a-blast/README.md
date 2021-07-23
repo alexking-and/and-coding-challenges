@@ -15,8 +15,12 @@ If you cut a purple wire, you can't then cut a purple, green, orange or white on
 Your challenge is to create an algorithm which, given [some sequences of wire cuts](https://pastebin.com/KcZzndyq), can determine whether or not the bomb was successfully disarmed in each case.
 
 * [x] 6 points are awarded for a working algorithm using the given sequences
-* [ ] 3 points are awarded for an interactive user interface
+* [x] 3 points are awarded for an interactive user interface
 * [?] 1 point is awarded for use of a unique coding language (used by no other participants)
 
 ## Solution
-For the UI I'd like to use web, so probably something LLVM-compatible for the main code. Thinking either Swift, Ruby, or Scala. (probably Swift)
+I picked Swift with the intention of compiling it to wasm and using regular HTML/CSS/JS, but turns out there's a library for building web apps directly in Swift, so that worked out.
+
+Swift had some nice language features that made the logic really easy to write; SwiftUI, on the other hand, I'm sure would be nice after a lot more practice, but I ran into a bunch of problems which made it pretty frustrating to deal with, and it was surprisingly hard to find useful help online.
+
+A demo is available at: https://alexking-and.github.io/defuser
