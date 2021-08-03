@@ -18,4 +18,7 @@ The expected output is:
 `true`
 
 ## Solution
-Language TBD, thinking either D, Dart, or Haxe - something functional but not something I know
+Picked D randomly and it actually had some surprisingly nice features (easy unit tests and pure functions!), but it's lack of popularity meant there wasn't a great amount of help out there.
+Fortunately, the problem ended up being really easy to solve anyway; additive notation can be parsed just by converting the characters to numbers and summing them, and subtractive notation only has a few exceptions which are easy enough to hard code.
+
+Build and run using `dub` or any other D tools.
