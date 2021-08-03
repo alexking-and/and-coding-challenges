@@ -16,7 +16,7 @@ Your challenge is to create an algorithm which, given [some sequences of wire cu
 
 * [x] 6 points are awarded for a working algorithm using the given sequences
 * [x] 3 points are awarded for an interactive user interface
-* [?] 1 point is awarded for use of a unique coding language (used by no other participants)
+* [x] 1 point is awarded for use of a unique coding language (used by no other participants)
 
 ## Solution
 I picked Swift with the intention of compiling it to wasm and using regular HTML/CSS/JS, but turns out there's a library for building web apps directly in Swift, so that worked out.

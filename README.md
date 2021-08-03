@@ -11,3 +11,4 @@ Challenge | Technologies Used
 [#5: Short Changed](challenge-05-short-changed) | JavaScript
 [#6: Clock Wise](challenge-06-clock-wise) | Elm
 [#7: Coding's a Blast](challenge-07-codings-a-blast) | Swift
+[#8: Challenge VIII](challenge-08-challenge-viii) | TBD
