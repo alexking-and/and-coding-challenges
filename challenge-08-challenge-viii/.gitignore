@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/challenge-08-challenge-viii
+challenge-08-challenge-viii.so
+challenge-08-challenge-viii.dylib
+challenge-08-challenge-viii.dll
+challenge-08-challenge-viii.a
+challenge-08-challenge-viii.lib
+challenge-08-challenge-viii-test-*
+*.exe
+*.o
+*.obj
+*.lst
