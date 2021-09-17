@@ -13,3 +13,4 @@ Challenge | Technologies Used
 [#7: Coding's a Blast](challenge-07-codings-a-blast) | Swift
 [#8: Challenge VIII](challenge-08-challenge-viii) | D
 [#9: Hllo Worl](challenge-09-hllo-worl) | Common Lisp
+~~[#10: Mr President](challenge-10-mr-president)~~ | ~~Kotlin~~
