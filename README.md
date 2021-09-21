@@ -14,3 +14,4 @@ Challenge | Technologies Used
 [#8: Challenge VIII](challenge-08-challenge-viii) | D
 [#9: Hllo Worl](challenge-09-hllo-worl) | Common Lisp
 ~~[#10: Mr President](challenge-10-mr-president)~~ | ~~Kotlin~~
+[#11: Poetry in a Haystack](challenge-11-poetry-in-a-haystack) | Python
