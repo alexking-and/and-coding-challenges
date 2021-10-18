@@ -1,4 +1,4 @@
-# Challenge 10 - Poetry in a Haystack
+# Challenge 11 - Poetry in a Haystack
 
 ## Problem
 [Here is a file of complete gibb’rish](https://raw.githubusercontent.com/alexkitch/and-challenges/master/poetry.txt) - except all isn’t quite as t’would seemeth.
