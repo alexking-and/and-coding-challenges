@@ -16,3 +16,4 @@ Challenge | Technologies Used
 ~~[#10: Mr President](challenge-10-mr-president)~~ | ~~Kotlin~~
 [#11: Poetry in a Haystack](challenge-11-poetry-in-a-haystack) | Python, NLTK
 [#12: Number Rendering](challenge-12-number-rendering) | Ruby
+~~[#13: Challenging Chains](challenge-13-challenging-chains)~~ | ~~C++~~
