@@ -1,0 +1,14 @@
+{
+  "name": "challenge-02-word-buckets",
+  "version": "1.0.0",
+  "description": "## Problem This week's challenge is to write an algorithm which divides a sentence into 'word buckets', where each bucket contains `n` or fewer characters. Only complete words can be placed into each bucket. Spaces count as a character, however you should trim leading and trailing spaces from words as they're placed into buckets. If a word is too large to fit into a bucket, it should be discarded.",
+  "main": "bucketify.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ava": "^4.0.1"
+  }
+}

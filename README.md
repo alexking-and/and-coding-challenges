@@ -25,4 +25,4 @@ Challenge | Technologies Used
 Challenge | Technologies Used
 --- | ---
 ~~#1: Battleships~~ | N/A
-[#2: Word Buckets](2022/challenge-02-word-buckets) | TBD
+[#2: Word Buckets](2022/challenge-02-word-buckets) | JavaScript

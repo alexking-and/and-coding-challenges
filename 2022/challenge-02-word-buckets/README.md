@@ -15,9 +15,9 @@ your algorithm should return:
 
 ```["the quick", "brown fox", "jumps over", "the lazy", "dog"]```
 
-* [ ] 6 points are awarded for a working algorithm using [this sample problem set](https://pastebin.com/YhrF9YMm)
-* [ ] 3 points are awarded for an algorithm in under 500 bytes of code (not including input data)
-* [ ] 2 points are awarded for providing a suite of unit tests
+* [x] 6 points are awarded for a working algorithm using [this sample problem set](https://pastebin.com/YhrF9YMm)
+* [x] 3 points are awarded for an algorithm in under 500 bytes of code (not including input data)
+* [x] 2 points are awarded for providing a suite of unit tests
 
 ## Solution
-Language TBC - would like to be functional, but needs to be crushable
+Straight forward one this time! I'm saving some functional languages for something more complex, so for now JavaScript seemed like the easiest way to come way under the byte limit.
