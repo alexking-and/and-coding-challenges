@@ -26,3 +26,4 @@ Challenge | Technologies Used
 --- | ---
 ~~#1: Battleships~~ | N/A
 [#2: Word Buckets](2022/challenge-02-word-buckets) | JavaScript
+[#3: Satellites](2022/challenge-03-satellites) | Rust
