@@ -28,3 +28,6 @@ Challenge | Technologies Used
 [#2: Word Buckets](2022/challenge-02-word-buckets) | JavaScript
 [#3: Satellites](2022/challenge-03-satellites) | Rust
 [#4: Connect Four](2022/challenge-04-connect-four) | Rust
+~~#5: Islands in fstream~~ | N/A
+~~#6: Haiku?~~ | N/A
+[#7: Caesar Cypher](2022/challenge-07-caesar-cypher) | C
