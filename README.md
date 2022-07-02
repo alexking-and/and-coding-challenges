@@ -31,3 +31,4 @@ Challenge | Technologies Used
 ~~#5: Islands in fstream~~ | N/A
 ~~#6: Haiku?~~ | N/A
 [#7: Caesar Cypher](2022/challenge-07-caesar-cypher) | C
+~~[#8: PIN](2022/challenge-08-pin)~~ | ~~Scala~~
