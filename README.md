@@ -32,3 +32,8 @@ Challenge | Technologies Used
 ~~#6: Haiku?~~ | N/A
 [#7: Caesar Cypher](2022/challenge-07-caesar-cypher) | C
 ~~[#8: PIN](2022/challenge-08-pin)~~ | ~~Scala~~
+
+## 2023
+Challenge | Technologies Used
+--- | ---
+[#1: Control-C, Control-V](2023/challenge-01-control-c-control-v) | Rust
